@@ -1,13 +1,25 @@
-import React, {Component} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+// import { CSSTransition } from 'react-transition-group';
+import Menu from './Menu/Menu';
+import Content from './Content/content';
+// import main from './background/main';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>My React App</h1>
-            </div>
-        );
-    }
+
+function App() {
+
+    // // Run only when the window opens, setting the canvas renderer
+    // useEffect(() => {
+    //     main().catch((err) => {
+    //         console.error(err);
+    //     });
+    // }, []);
+
+    return (
+        <div className="app-div">
+            <Menu />
+            <Content />
+        </div>
+    );
 }
 
 export default App;
